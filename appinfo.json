@@ -1,0 +1,42 @@
+{
+    "appKeys": {},
+    "capabilities": [
+        ""
+    ],
+    "companyName": "HikerDoodleDoo Inc",
+    "enableMultiJS": true,
+    "longName": "Your face",
+    "projectType": "native",
+    "resources": {
+        "media": [
+            {
+                "file": "fonts/south park.ttf",
+                "name": "FONT_SOUTHPARK_24",
+                "targetPlatforms": null,
+                "type": "font"
+            },
+            {
+                "file": "fonts/south park.ttf",
+                "name": "FONT_SOUTHPARK_30",
+                "targetPlatforms": null,
+                "type": "font"
+            },
+            {
+                "file": "images/southparkme.png",
+                "name": "IMAGE_SOUTHPARK",
+                "targetPlatforms": null,
+                "type": "bitmap"
+            }
+        ]
+    },
+    "sdkVersion": "3",
+    "shortName": "Your face",
+    "targetPlatforms": [
+        "basalt"
+    ],
+    "uuid": "40a8e264-acc8-48a5-b3e9-cac24867a4bd",
+    "versionLabel": "1.0",
+    "watchapp": {
+        "watchface": true
+    }
+}
