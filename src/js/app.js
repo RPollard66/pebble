@@ -8,15 +8,17 @@ function fetchMeh() {
         console.log(req.responseText);
 
         var response = JSON.parse(req.responseText);
-        var dealTitle = response.deal.title;
-        var dealCost = response.deal.items[0].price;
         
+        var dealTitle = response.deal.title;
+        
+        var dealCost = response.deal.items[0].price;
         var costAsString = '$' + dealCost.toString();
         
         Pebble.sendAppMessage({
           
           "MEH_TITLE_KEY":dealTitle,
-          "MEH_COST_KEY":costAsString}
+          "MEH_COST_KEY":costAsString
+        }
         );
 
       } else {

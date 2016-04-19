@@ -1,4 +1,5 @@
 #include <pebble.h>
+// Meh App
  
 static Window *s_main_window;
 
@@ -12,7 +13,8 @@ static uint8_t s_sync_buffer[64];
 enum MehKey {
   
   MEH_TITLE_KEY = 0x0,  // TUPLE_CSTRING
-  MEH_COST_KEY = 0x1,         // TUPLE_CSTRING
+  MEH_COST_KEY = 0x1,   // TUPLE_CSTRING
+  
 };
 
 
@@ -31,6 +33,8 @@ static void sync_tuple_changed_callback(const uint32_t key, const Tuple* new_tup
     case MEH_COST_KEY:
       text_layer_set_text(s_cost_layer, new_tuple->value->cstring);
       break;
+    
+     
   }
 }
 
@@ -63,17 +67,20 @@ static void window_load(Window *window) {
   text_layer_set_text_alignment(s_title_layer, GTextAlignmentCenter);
   layer_add_child(window_layer, text_layer_get_layer(s_title_layer));
 
-  s_cost_layer = text_layer_create(GRect(0, 100, bounds.size.w, bounds.size.h));
+  s_cost_layer = text_layer_create(GRect(0, 120, bounds.size.w, bounds.size.h));
   text_layer_set_text_color(s_cost_layer, GColorWhite);
   text_layer_set_background_color(s_cost_layer, GColorClear);
-  text_layer_set_font(s_cost_layer, fonts_get_system_font(FONT_KEY_GOTHIC_24_BOLD));
+  text_layer_set_font(s_cost_layer, fonts_get_system_font(FONT_KEY_BITHAM_42_BOLD));
   text_layer_set_text_alignment(s_cost_layer, GTextAlignmentCenter);
   layer_add_child(window_layer, text_layer_get_layer(s_cost_layer));
+  
+  
 
   Tuplet initial_values[] = {
    
     TupletCString(MEH_TITLE_KEY, "Today's Deal"),
     TupletCString(MEH_COST_KEY, "$0.00"),
+    
   };
 
   app_sync_init(&s_sync, s_sync_buffer, sizeof(s_sync_buffer), 
@@ -88,6 +95,7 @@ static void window_unload(Window *window) {
   
   text_layer_destroy(s_cost_layer);
   text_layer_destroy(s_title_layer);
+  
   
 }
 
