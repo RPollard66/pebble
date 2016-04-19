@@ -1,42 +1,26 @@
 {
-    "appKeys": {},
+    "appKeys": {
+        "MEH_COST_KEY": 1,
+        "MEH_TITLE_KEY": 0
+    },
     "capabilities": [
         ""
     ],
-    "companyName": "HikerDoodleDoo Inc",
+    "companyName": "bpollard66@gmail.com",
     "enableMultiJS": true,
-    "longName": "Your face",
+    "longName": "Meh",
     "projectType": "native",
     "resources": {
-        "media": [
-            {
-                "file": "fonts/south park.ttf",
-                "name": "FONT_SOUTHPARK_24",
-                "targetPlatforms": null,
-                "type": "font"
-            },
-            {
-                "file": "fonts/south park.ttf",
-                "name": "FONT_SOUTHPARK_30",
-                "targetPlatforms": null,
-                "type": "font"
-            },
-            {
-                "file": "images/southparkme.png",
-                "name": "IMAGE_SOUTHPARK",
-                "targetPlatforms": null,
-                "type": "bitmap"
-            }
-        ]
+        "media": []
     },
     "sdkVersion": "3",
-    "shortName": "Your face",
+    "shortName": "Meh",
     "targetPlatforms": [
         "basalt"
     ],
-    "uuid": "40a8e264-acc8-48a5-b3e9-cac24867a4bd",
+    "uuid": "6b0d937b-cfb2-4c52-b906-8dbc26a6ae83",
     "versionLabel": "1.0",
     "watchapp": {
-        "watchface": true
+        "watchface": false
     }
 }
