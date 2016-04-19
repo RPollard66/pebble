@@ -61,14 +61,14 @@ static void window_load(Window *window) {
   
 
   s_title_layer = text_layer_create(GRect(0, 0, bounds.size.w, bounds.size.h));
-  text_layer_set_text_color(s_title_layer, GColorWhite);
+  text_layer_set_text_color(s_title_layer, GColorBlack);
   text_layer_set_background_color(s_title_layer, GColorClear);
   text_layer_set_font(s_title_layer, fonts_get_system_font(FONT_KEY_GOTHIC_24_BOLD));
   text_layer_set_text_alignment(s_title_layer, GTextAlignmentCenter);
   layer_add_child(window_layer, text_layer_get_layer(s_title_layer));
 
   s_cost_layer = text_layer_create(GRect(0, 120, bounds.size.w, bounds.size.h));
-  text_layer_set_text_color(s_cost_layer, GColorWhite);
+  text_layer_set_text_color(s_cost_layer, GColorBlack);
   text_layer_set_background_color(s_cost_layer, GColorClear);
   text_layer_set_font(s_cost_layer, fonts_get_system_font(FONT_KEY_BITHAM_42_BOLD));
   text_layer_set_text_alignment(s_cost_layer, GTextAlignmentCenter);
@@ -101,7 +101,7 @@ static void window_unload(Window *window) {
 
 static void init(void) {
   s_main_window = window_create();
-  window_set_background_color(s_main_window, GColorBlack);
+  window_set_background_color(s_main_window, GColorLavenderIndigo);
   //window_set_fullscreen(s_main_window, true);
   window_set_window_handlers(s_main_window, (WindowHandlers) {
     .load = window_load,
