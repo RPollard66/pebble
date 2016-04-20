@@ -8,7 +8,7 @@ static TextLayer *s_cost_layer;
 
 
 static AppSync s_sync;
-static uint8_t s_sync_buffer[64];
+static uint8_t s_sync_buffer[1024];
 
 enum MehKey {
   
@@ -18,9 +18,17 @@ enum MehKey {
 };
 
 
+static void appmsg_in_dropped(AppMessageResult reason, void *context) {
+  APP_LOG(APP_LOG_LEVEL_DEBUG, "In dropped: %i", reason);
+}
+
+
 static void sync_error_callback(DictionaryResult dict_error, AppMessageResult app_message_error, void *context) {
   APP_LOG(APP_LOG_LEVEL_DEBUG, "App Message Sync Error: %d", app_message_error);
+  
 }
+
+
 
 static void sync_tuple_changed_callback(const uint32_t key, const Tuple* new_tuple, const Tuple* old_tuple, void* context) {
   switch (key) {
@@ -109,7 +117,10 @@ static void init(void) {
   });
   window_stack_push(s_main_window, true);
 
+  app_message_register_inbox_dropped(appmsg_in_dropped);
+  
   app_message_open(64, 64);
+  
 }
 
 static void deinit(void) {

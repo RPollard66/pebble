@@ -4,9 +4,9 @@
         "MEH_TITLE_KEY": 0
     },
     "capabilities": [
-        ""
+        "configurable"
     ],
-    "companyName": "bpollard66@gmail.com",
+    "companyName": "Hikerdoodledoo",
     "enableMultiJS": true,
     "longName": "Meh",
     "projectType": "native",
@@ -16,7 +16,9 @@
     "sdkVersion": "3",
     "shortName": "Meh",
     "targetPlatforms": [
-        "basalt"
+        "aplite",
+        "basalt",
+        "chalk"
     ],
     "uuid": "6b0d937b-cfb2-4c52-b906-8dbc26a6ae83",
     "versionLabel": "1.0",

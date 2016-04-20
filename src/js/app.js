@@ -1,45 +1,66 @@
 
-function fetchMeh() {
-  var req = new XMLHttpRequest();
-  req.open('GET', "https://api.meh.com/1/current.json?apikey=7Fq9Kc7AE8nmg2RIOWHX8lgw!2fPUaBp");
-  req.onload = function(e) {
-    if (req.readyState == 4) {
-      if(req.status == 200) {
-        console.log(req.responseText);
 
-        var response = JSON.parse(req.responseText);
+
+var dealTitle;
+var dealCostAsString;
+
+function loadMehDeal()
+{
+  
+      var method = 'GET';
+      var url = 'https://api.meh.com/1/current.json?apikey=7Fq9Kc7AE8nmg2RIOWHX8lgw!2fPUaBp';
+
+      // Create the request
+      var request = new XMLHttpRequest();
+
+      // Specify the callback for when the request is completed
+      request.onload = function() {
+      try {
+          // Transform in to JSON
+          var json = JSON.parse(this.responseText);
+
+          // Read data
+          dealTitle = json.deal.title;
         
-        var dealTitle = response.deal.title;
-        
-        var dealCost = response.deal.items[0].price;
-        var costAsString = '$' + dealCost.toString();
+          var dealCost = json.deal.items[0].price;
+          dealCostAsString = '$' + dealCost.toString();
         
         Pebble.sendAppMessage({
           
-          "MEH_TITLE_KEY":dealTitle,
-          "MEH_COST_KEY":costAsString
-        }
+            "MEH_TITLE_KEY":dealTitle,
+            "MEH_COST_KEY":dealCostAsString
+          }
+                                
         );
+        
+        console.log(dealTitle);
+        console.log(dealCost);
+        
+          
+          
+      
+  } catch(err) {
+    console.log('Error parsing JSON response!');
+  }
+};
 
-      } else {
-        console.log("Error");
-      }
-    }
-  };
-  req.send(null);
+// Send the request
+request.open(method, url);
+request.send();
+  
 }
 
 
-
-
 Pebble.addEventListener("ready", function(e) {
-  console.log("connect!" + e.ready);
-  fetchMeh();
+  
+   loadMehDeal();
+  
 });
 
 Pebble.addEventListener("appmessage", function(e) {  
-  console.log("message!");
-  fetchMeh();
+  
+  loadMehDeal();
+  
 });
 
 Pebble.addEventListener("webviewclosed", function(e) {
