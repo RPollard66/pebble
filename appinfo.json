@@ -3,15 +3,15 @@
     "capabilities": [
         ""
     ],
-    "companyName": "HikerDoodleDoo Inc",
+    "companyName": "bpollard66@gmail.com",
     "enableMultiJS": true,
-    "longName": "Your face",
+    "longName": "Snuffles",
     "projectType": "native",
     "resources": {
         "media": [
             {
                 "file": "fonts/shangri-la.ttf",
-                "name": "FONT_SHANGRILA_30_BOLD_30",
+                "name": "SHANGRILA_30_BOLD_30",
                 "targetPlatforms": null,
                 "type": "font"
             },
@@ -20,33 +20,17 @@
                 "name": "IMAGE_SNUFFLES",
                 "targetPlatforms": null,
                 "type": "bitmap"
-            },
-            {
-                "file": "fonts/south park.ttf",
-                "name": "FONT_SOUTHPARK_24",
-                "targetPlatforms": null,
-                "type": "font"
-            },
-            {
-                "file": "fonts/south park.ttf",
-                "name": "FONT_SOUTHPARK_30",
-                "targetPlatforms": null,
-                "type": "font"
-            },
-            {
-                "file": "images/southparkme.png",
-                "name": "IMAGE_SOUTHPARK",
-                "targetPlatforms": null,
-                "type": "bitmap"
             }
         ]
     },
     "sdkVersion": "3",
-    "shortName": "Your face",
+    "shortName": "Snuffles",
     "targetPlatforms": [
-        "basalt"
+        "aplite",
+        "basalt",
+        "chalk"
     ],
-    "uuid": "40a8e264-acc8-48a5-b3e9-cac24867a4bd",
+    "uuid": "0912c8ca-1999-4683-bd75-d012fedb4482",
     "versionLabel": "1.0",
     "watchapp": {
         "watchface": true
