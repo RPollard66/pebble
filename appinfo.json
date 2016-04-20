@@ -23,13 +23,13 @@
             },
             {
                 "file": "fonts/south park.ttf",
-                "name": "FONT_SOUTHPARK_24",
+                "name": "FONT_SOUTHPARK_20",
                 "targetPlatforms": null,
                 "type": "font"
             },
             {
                 "file": "fonts/south park.ttf",
-                "name": "FONT_SOUTHPARK_30",
+                "name": "FONT_SOUTHPARK_24",
                 "targetPlatforms": null,
                 "type": "font"
             },

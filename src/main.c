@@ -48,22 +48,22 @@ static void main_window_load(Window *window) {
   // Time layer
   s_time_layer = text_layer_create(GRect(0, 0, bounds.size.w, bounds.size.h));
   text_layer_set_background_color(s_time_layer, GColorClear);
-  text_layer_set_text_color(s_time_layer, GColorBlack);
+  text_layer_set_text_color(s_time_layer, GColorWhite);
   
   
   // Date layer
   // placement: (x, y, width, height) origin at top left
   // take size of font into consideration
-  s_date_layer = text_layer_create(GRect(0, 130, bounds.size.w, bounds.size.h));
+  s_date_layer = text_layer_create(GRect(0, 145, 144, 30));
   text_layer_set_text_color(s_date_layer, GColorBlack);
   text_layer_set_background_color(s_date_layer, GColorClear);
     
   
   // Time font
-  s_time_font = fonts_load_custom_font(resource_get_handle(RESOURCE_ID_FONT_SOUTHPARK_30));
+  s_time_font = fonts_load_custom_font(resource_get_handle(RESOURCE_ID_FONT_SOUTHPARK_24));
   
   //Date font
-  s_date_font = fonts_load_custom_font(resource_get_handle(RESOURCE_ID_FONT_SOUTHPARK_24));
+  s_date_font = fonts_load_custom_font(resource_get_handle(RESOURCE_ID_FONT_SOUTHPARK_20));
 
 
   // Apply fonts to TextLayers
@@ -74,7 +74,7 @@ static void main_window_load(Window *window) {
   text_layer_set_text_alignment(s_time_layer, GTextAlignmentRight);
   
   // Date alignment
-  text_layer_set_text_alignment(s_date_layer, GTextAlignmentRight);
+  text_layer_set_text_alignment(s_date_layer, GTextAlignmentCenter);
   
   // Add time layer
   layer_add_child(window_layer, text_layer_get_layer(s_time_layer));
