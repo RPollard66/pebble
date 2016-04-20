@@ -3,7 +3,7 @@
     "capabilities": [
         ""
     ],
-    "companyName": "bpollard66@gmail.com",
+    "companyName": "Hikerdoodledoo",
     "enableMultiJS": true,
     "longName": "Snuffles",
     "projectType": "native",
@@ -11,12 +11,13 @@
         "media": [
             {
                 "file": "fonts/shangri-la.ttf",
-                "name": "SHANGRILA_30_BOLD_30",
+                "name": "FONT_SHANGRILA_30_BOLD_30",
                 "targetPlatforms": null,
                 "type": "font"
             },
             {
                 "file": "images/snuffles.png",
+                "menuIcon": true,
                 "name": "IMAGE_SNUFFLES",
                 "targetPlatforms": null,
                 "type": "bitmap"
@@ -26,9 +27,7 @@
     "sdkVersion": "3",
     "shortName": "Snuffles",
     "targetPlatforms": [
-        "aplite",
-        "basalt",
-        "chalk"
+        "basalt"
     ],
     "uuid": "0912c8ca-1999-4683-bd75-d012fedb4482",
     "versionLabel": "1.0",
