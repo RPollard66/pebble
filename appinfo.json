@@ -10,6 +10,18 @@
     "resources": {
         "media": [
             {
+                "file": "fonts/shangri-la.ttf",
+                "name": "FONT_SHANGRILA_30_BOLD_30",
+                "targetPlatforms": null,
+                "type": "font"
+            },
+            {
+                "file": "images/snuffles.png",
+                "name": "IMAGE_SNUFFLES",
+                "targetPlatforms": null,
+                "type": "bitmap"
+            },
+            {
                 "file": "fonts/south park.ttf",
                 "name": "FONT_SOUTHPARK_24",
                 "targetPlatforms": null,

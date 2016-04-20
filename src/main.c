@@ -1,4 +1,5 @@
 #include <pebble.h>
+// snuffles watchface
 
 static Window *s_main_window;
 static TextLayer *s_time_layer, *s_date_layer;
@@ -35,7 +36,7 @@ static void main_window_load(Window *window) {
   GRect bounds = layer_get_bounds(window_layer);
   
   // Create GBitmap
-  s_background_bitmap = gbitmap_create_with_resource(RESOURCE_ID_IMAGE_SOUTHPARK);
+  s_background_bitmap = gbitmap_create_with_resource(RESOURCE_ID_IMAGE_SNUFFLES);
 
   // Create BitmapLayer to display the GBitmap
   s_background_layer = bitmap_layer_create(bounds);
@@ -47,22 +48,22 @@ static void main_window_load(Window *window) {
   // Time layer
   s_time_layer = text_layer_create(GRect(0, 0, bounds.size.w, bounds.size.h));
   text_layer_set_background_color(s_time_layer, GColorClear);
-  text_layer_set_text_color(s_time_layer, GColorWhite);
+  text_layer_set_text_color(s_time_layer, GColorBlack);
   
   
   // Date layer
   // placement: (x, y, width, height) origin at top left
   // take size of font into consideration
-  s_date_layer = text_layer_create(GRect(0, 140, 144, 30));
+  s_date_layer = text_layer_create(GRect(0, 130, bounds.size.w, bounds.size.h));
   text_layer_set_text_color(s_date_layer, GColorBlack);
   text_layer_set_background_color(s_date_layer, GColorClear);
     
   
   // Time font
-  s_time_font = fonts_load_custom_font(resource_get_handle(RESOURCE_ID_FONT_SOUTHPARK_30));
+  s_time_font = fonts_load_custom_font(resource_get_handle(RESOURCE_ID_FONT_SHANGRILA_30_BOLD_30));
   
   //Date font
-  s_date_font = fonts_load_custom_font(resource_get_handle(RESOURCE_ID_FONT_SOUTHPARK_24));
+  s_date_font = fonts_load_custom_font(resource_get_handle(RESOURCE_ID_FONT_SHANGRILA_30_BOLD_30));
 
 
   // Apply fonts to TextLayers
@@ -73,7 +74,7 @@ static void main_window_load(Window *window) {
   text_layer_set_text_alignment(s_time_layer, GTextAlignmentRight);
   
   // Date alignment
-  text_layer_set_text_alignment(s_date_layer, GTextAlignmentCenter);
+  text_layer_set_text_alignment(s_date_layer, GTextAlignmentRight);
   
   // Add time layer
   layer_add_child(window_layer, text_layer_get_layer(s_time_layer));
