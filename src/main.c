@@ -36,7 +36,7 @@ static void main_window_load(Window *window) {
   GRect bounds = layer_get_bounds(window_layer);
   
   // Create GBitmap
-  s_background_bitmap = gbitmap_create_with_resource(RESOURCE_ID_IMAGE_SNUFFLES);
+  s_background_bitmap = gbitmap_create_with_resource(RESOURCE_ID_IMAGE_SOUTHPARK);
 
   // Create BitmapLayer to display the GBitmap
   s_background_layer = bitmap_layer_create(bounds);
@@ -60,10 +60,10 @@ static void main_window_load(Window *window) {
     
   
   // Time font
-  s_time_font = fonts_load_custom_font(resource_get_handle(RESOURCE_ID_FONT_SHANGRILA_30_BOLD_30));
+  s_time_font = fonts_load_custom_font(resource_get_handle(RESOURCE_ID_FONT_SOUTHPARK_30));
   
   //Date font
-  s_date_font = fonts_load_custom_font(resource_get_handle(RESOURCE_ID_FONT_SHANGRILA_30_BOLD_30));
+  s_date_font = fonts_load_custom_font(resource_get_handle(RESOURCE_ID_FONT_SOUTHPARK_24));
 
 
   // Apply fonts to TextLayers
