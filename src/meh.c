@@ -72,13 +72,13 @@ static void window_load(Window *window) {
   text_layer_set_text_color(s_title_layer, GColorBlack);
   text_layer_set_background_color(s_title_layer, GColorClear);
   text_layer_set_font(s_title_layer, fonts_get_system_font(FONT_KEY_GOTHIC_24_BOLD));
-  text_layer_set_text_alignment(s_title_layer, GTextAlignmentCenter);
+  text_layer_set_text_alignment(s_title_layer, GTextAlignmentLeft);
   layer_add_child(window_layer, text_layer_get_layer(s_title_layer));
 
-  s_cost_layer = text_layer_create(GRect(0, 120, bounds.size.w, bounds.size.h));
+  s_cost_layer = text_layer_create(GRect(0, 135, bounds.size.w, bounds.size.h));
   text_layer_set_text_color(s_cost_layer, GColorBlack);
   text_layer_set_background_color(s_cost_layer, GColorClear);
-  text_layer_set_font(s_cost_layer, fonts_get_system_font(FONT_KEY_BITHAM_42_BOLD));
+  text_layer_set_font(s_cost_layer, fonts_get_system_font(FONT_KEY_GOTHIC_28_BOLD));
   text_layer_set_text_alignment(s_cost_layer, GTextAlignmentCenter);
   layer_add_child(window_layer, text_layer_get_layer(s_cost_layer));
   
