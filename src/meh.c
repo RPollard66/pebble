@@ -87,7 +87,7 @@ static void window_load(Window *window) {
   Tuplet initial_values[] = {
    
     TupletCString(MEH_TITLE_KEY, "Today's Deal"),
-    TupletCString(MEH_COST_KEY, "$0.00"),
+    TupletCString(MEH_COST_KEY, "Loading ..."),
     
   };
 
